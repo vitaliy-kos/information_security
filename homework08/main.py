@@ -4,7 +4,7 @@
 # — наличие цифр
 # и переводит его в хэш-значение.
 import re
-import hashlib
+import bcrypt
 
 def lengthMoreEight(string) :
     return len(string) >= 8
@@ -33,4 +33,4 @@ if (not hasSmallBigLetters(pass_str)) :
 if (not hasDigits(pass_str)) :
     exit("Пароль должен содержать цифры!")
 
-print(hashlib.md5(pass_str.encode('utf8')).hexdigest())
+print(bcrypt.hashpw(pass_str.encode('utf8'), bcrypt.gensalt()))
