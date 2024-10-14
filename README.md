@@ -1,1 +1,1 @@
-# information_security
+# Информационная безопасность
